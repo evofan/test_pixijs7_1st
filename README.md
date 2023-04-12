@@ -22,3 +22,10 @@ reference
 >Refresh.
 <img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test1.jpg" width="50%">  
 <img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test2.jpg" width="50%">  
+
+or use below.
+
+**DevTools failed to load SourceMap for webpack:///node_modules//....js.map HTTP error: status code 404, net::ERR_UNKNOWN_URL_SCHEME**  
+[https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e](https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e)  
+>devtool: "eval-cheap-source-map"  
+>Add this to your webpack config and that's it.  
