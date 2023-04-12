@@ -29,3 +29,4 @@ or use below.
 [https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e](https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e)  
 >devtool: "eval-cheap-source-map"  
 >Add this to your webpack config and that's it.  
+<img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test4.jpg" width="50%">  
