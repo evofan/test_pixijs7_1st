@@ -37,8 +37,8 @@ module.exports = {
     sourceMapFilename: "[name].js.map"
   },
   
-  devtool: "source-map",
-  // devtool: "eval-cheap-source-map",
+  // devtool: "source-map",
+  devtool: "eval-cheap-source-map",
 
   devServer: {
     // public folder of webpack-dev-server
