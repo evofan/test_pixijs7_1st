@@ -30,3 +30,6 @@ or use below.
 >devtool: "eval-cheap-source-map"  
 >Add this to your webpack config and that's it.  
 <img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test4.jpg" width="50%">  
+
+**v7 Migration Guide**  
+[https://github.com/pixijs/pixijs/wiki/v7-Migration-Guide](https://github.com/pixijs/pixijs/wiki/v7-Migration-Guide)  
