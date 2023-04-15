@@ -42,3 +42,87 @@ Loaderの元の設計のインスピレーションは、今では時代遅れ�
 新しいイテレーションで求めていた事が幾つかありました: 
 静的読み込み、Workerを使用した読み込み、バックグラウンド読み込み、Promiseベース、キャッシュの層数の削減。
 これがどのように変化するかの簡単な例を次に示します。
+
+old:
+----------------------------------------------------------------------------------------------------
+import { Loader, Sprite } from 'pixi.js';
+
+const loader = new Loader();
+loader.add('background', 'path/to/assets/background.jpg');
+loader.load((loader, resources) => {
+  const image = Sprite.from(resources.background.texture);
+});
+----------------------------------------------------------------------------------------------------
+
+new:
+----------------------------------------------------------------------------------------------------
+import { Assets, Sprite } from 'pixi.js';
+
+const texture = await Assets.load('path/to/assets/background.jpg');
+const image = Sprite.from(texture);
+----------------------------------------------------------------------------------------------------
+
+■ peerDependenciesの使用を放棄する
+PixiJSは、各パッケージ内のpackage.jsonでpeerDependenciesを頻繁に使用します。
+このデザインの選択により、Pixiは多くの問題に悩まされてきました。
+削除するのは重大な変更であるため、今が良い時期でした。
+何も選択しない代わりに、peerDependenciesを完全に削除する事にしました。
+これにより、pixi.jsのインストールとアップグレードがはるかに簡単になります。
+パッケージを使用してカスタムバージョンを作成するためのツールの更新に取り組んでいます。
+※7.2.0 の時点で、一部のモジュールベースのCDNとの互換性を維持するために、この変更を元に戻しました。
+
+■ その他の変更
+・pixi.jsとpixi.js-legacyを除いて、全てのパッケージのブラウザービルドが削除されました。
+・Graphics.nextRoundedRectBehaviorを削除します。これがデフォルトの動作になりました。
+・Text.nextLineHeightBehaviorを削除します。これがデフォルトの動作になりました。
+・AbstractBatchRendererとBatchPluginFactoryが削除されました。
+BatchRendererを拡張するか、デフォルトのBatchRendererでsetShaderGeneratorを使用します(例: renderer.plugins.batch)。
+・BatchRendererはデフォルトで@pixi/coreにインストールされ、Renderer.registerPlugin('batch',BatchRenderer)はもう必要ありません。
+
+■ @pixi/coreからのエクスポート
+@pixi/coreパッケージは、次のパッケージに依存し、再エクスポートするようになりました。
+
+@pixi/math
+@pixi/contants
+@pixi/utils
+@pixi/runner
+@pixi/settings
+@pixi/ticker
+
+一部のパッケージは直接インストールしても機能しますが、他のパッケージは機能しません。
+@pixi/coreと一緒にインストールする事で、同じコードの2つのコピーを効果的にインポートする事になるからです。
+
+@pixi/coreにはそのパッケージの独自のバージョンがあるため、
+@pixi/settingsから設定を変更しても何も起こらないというエラーが発生します。
+プロジェクトからこれらをアンインストールし、代わりに @pixi/coreを使用する事をお勧めします。
+----------------------------------------------------------------------------------------------------
+import { Rectangle } from '@pixi/math';
+import { settings } from '@pixi/settings';
+import { ALPHA_MODES } from '@pixi/constants';
+import { string2hex } from '@pixi/utils';
+----------------------------------------------------------------------------------------------------
+
+今は次のようになります:
+----------------------------------------------------------------------------------------------------
+import { Rectangle, settings, ALPHA_MODES, utils } from '@pixi/core';
+
+const { string2hex } = utils;
+----------------------------------------------------------------------------------------------------
+
+■ 抽出と準備のシステム
+
+ExtractとprepareのプラグインはRendererの"system"に変換されました。
+----------------------------------------------------------------------------------------------------
+renderer.plugins.extract
+renderer.plugins.prepare
+----------------------------------------------------------------------------------------------------
+
+今は次のようになります:
+----------------------------------------------------------------------------------------------------
+renderer.extract
+renderer.prepare
+----------------------------------------------------------------------------------------------------
+
+■ 
+
+
