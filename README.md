@@ -33,3 +33,10 @@ or use below.
 
 **v7 Migration Guide**  
 [https://github.com/pixijs/pixijs/wiki/v7-Migration-Guide](https://github.com/pixijs/pixijs/wiki/v7-Migration-Guide)  
+
+↓のような警告が出てる  
+Errror with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.  
+
+**GitHubに謎のHTTPレスポンスヘッダが含まれている**  
+[https://qiita.com/rana_kualu/items/453d7c4d551e0e6063f3]()  
+>permissions-policy: interest-cohort=()  
