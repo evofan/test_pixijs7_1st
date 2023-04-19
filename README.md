@@ -1,4 +1,4 @@
-# First test of pixijs ver7.
+# First test of PixiJS ver7.
 
 <img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test3.jpg" width="50%">  
 
@@ -38,8 +38,9 @@ or use below.
 Errror with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.  
 
 **GitHubに謎のHTTPレスポンスヘッダが含まれている**  
-[https://qiita.com/rana_kualu/items/453d7c4d551e0e6063f3]()  
+[https://qiita.com/rana_kualu/items/453d7c4d551e0e6063f3](https://qiita.com/rana_kualu/items/453d7c4d551e0e6063f3)  
 >permissions-policy: interest-cohort=()  
+>これはFLoCを拒否するという主張です  
 
 **アロー関数式とAsync/Awaitを使った非同期処理 | TomoSoft**  
 [https://tomosoft.jp/design/?p=44223](https://tomosoft.jp/design/?p=44223)  
