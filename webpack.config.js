@@ -1,7 +1,7 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const { SourceMapDevToolPlugin } = require("webpack");
 
 module.exports = {
@@ -18,6 +18,14 @@ module.exports = {
     open: true
   },
 
+  // webpack: {
+  //   configure: {
+  //     experiments: {
+  //       topLevelAwait: true,
+  //     }
+  //   }
+  // },
+
   entry: "./src/index.js",
 
   plugins: [
@@ -29,6 +37,13 @@ module.exports = {
     new SourceMapDevToolPlugin({
       filename: "[file].map"
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/assets", to: "assets"
+        }
+      ]
+    })
   ],
 
   output: {
@@ -36,7 +51,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     sourceMapFilename: "[name].js.map"
   },
-  
+
   // devtool: "source-map",
   devtool: "eval-cheap-source-map",
 
