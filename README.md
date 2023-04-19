@@ -40,3 +40,16 @@ Errror with Permissions-Policy header: Origin trial controlled feature not enabl
 **GitHubに謎のHTTPレスポンスヘッダが含まれている**  
 [https://qiita.com/rana_kualu/items/453d7c4d551e0e6063f3]()  
 >permissions-policy: interest-cohort=()  
+
+**アロー関数式とAsync/Awaitを使った非同期処理 | TomoSoft**  
+[https://tomosoft.jp/design/?p=44223](https://tomosoft.jp/design/?p=44223)  
+>同じ処理を、async/awaitを使用すると次のようになります
+
+**PIXI sprites are blurry on mobile devices. - Pixi.js - HTML5 Game Devs Forum**  
+[https://www.html5gamedevs.com/topic/33044-pixi-sprites-are-blurry-on-mobile-devices/](https://www.html5gamedevs.com/topic/33044-pixi-sprites-are-blurry-on-mobile-devices/)  
+>Please type "window.devicePixelRatio" in the console, or "console.log"  that value in your code. Is it 1 or something else?  
+
+**Pixi.jsの高解像度端末の対応 - Qiita**  
+[https://qiita.com/couragenki/items/8f8cae562f5e0fff1805](https://qiita.com/couragenki/items/8f8cae562f5e0fff1805)  
+>resolution: window.devicePixelRatio || 1,  
+>autoResize: true  
