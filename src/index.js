@@ -3,6 +3,10 @@ console.log("pixijs7 1st test!");
 import * as PIXI from "pixi.js";
 import { Assets, Sprite } from 'pixi.js';
 
+import { randomInt } from "./helper/randomInt";
+
+
+
 // PIXI.useDeprecated();
 
 const WIDTH = 480;
@@ -66,6 +70,10 @@ const LoadImg = async () => {
 }
 
 LoadImg();
+
+// RandomInt test
+let dice = randomInt(1, 6);
+console.log("dice no: ", dice);
 
 const next = () => {
     console.log("next()");
