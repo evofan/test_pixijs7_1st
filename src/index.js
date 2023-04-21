@@ -5,12 +5,14 @@ import { Assets, Sprite } from 'pixi.js';
 
 import { randomInt } from "./helper/randomInt";
 
+import { STAGES } from "./constants";
 
 
 // PIXI.useDeprecated();
 
-const WIDTH = 480;
-const HEIGHT = 320;
+const WIDTH = STAGES.WIDTH;
+const HEIGHT = STAGES.HEIGHT;
+const BG_COLOR = STAGES.BG_COLOR;
 
 console.log("window.devicePixelRatio: ", window.devicePixelRatio); // window.devicePixelRatio:  2
 
@@ -19,7 +21,7 @@ console.log("window.devicePixelRatio: ", window.devicePixelRatio); // window.dev
 let app = new PIXI.Application({
     width: WIDTH,
     height: HEIGHT,
-    backgroundColor: 0x000000,
+    backgroundColor: BG_COLOR,
     // resolution: window.devicePixelRatio || 1,
     autoResize: true
 });
