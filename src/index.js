@@ -6,7 +6,7 @@ import { Assets, Sprite } from 'pixi.js';
 import { randomInt } from "./helper/randomInt";
 
 import { STAGES } from "./constants";
-
+import { displayDateText } from "./helper/text";
 
 // PIXI.useDeprecated();
 
@@ -80,4 +80,9 @@ console.log("dice no: ", dice);
 const next = () => {
     console.log("next()");
 }
+
+// view todays date
+let today = displayDateText(app);
+
+
 
