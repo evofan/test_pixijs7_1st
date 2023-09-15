@@ -42,10 +42,10 @@ app.stage.addChild(container);
 
 // PixiJS Deprecation Warning: Setting interactive is deprecated, use eventMode = 'none'/'passive'/'auto'/'static'/'dynamic' instead.Deprecated since v7.2.0
 
-let temp = `PixiJS Ver: ${PIXI.VERSION}`;
+let temp = `PixiJS Ver:`;
 console.log(temp);
 let text1 = new PIXI.Text(temp, {
-    fontSize: 40,
+    fontSize: 30,
     fill: 0xfefefe,
     lineJoin: "round"
 });
@@ -53,6 +53,18 @@ container.addChild(text1);
 text1.anchor.set(0.5);
 text1.x = WIDTH / 2;
 text1.y = HEIGHT / 2;
+
+let temp2 = `${PIXI.VERSION}`;
+console.log(temp2);
+let text2 = new PIXI.Text(temp2, {
+    fontSize: 40,
+    fill: 0xff0033,
+    lineJoin: "round"
+});
+container.addChild(text2);
+text2.anchor.set(0.5);
+text2.x = WIDTH / 2 + text1.width - 10;
+text2.y = HEIGHT / 2;
 
 // Load image and Set sprite
 const LoadImg = async () => {
