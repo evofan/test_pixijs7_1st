@@ -54,3 +54,8 @@ Errror with Permissions-Policy header: Origin trial controlled feature not enabl
 [https://qiita.com/couragenki/items/8f8cae562f5e0fff1805](https://qiita.com/couragenki/items/8f8cae562f5e0fff1805)  
 >resolution: window.devicePixelRatio || 1,  
 >autoResize: true  
+
+**package.jsonのnpmのバージョンを一括で書き変えてくれるncuが便利だった**  
+[https://tacamy.hatenablog.com/entry/2016/08/10/193603](https://tacamy.hatenablog.com/entry/2016/08/10/193603)    
+>初回のみ、npm-check-updatesをグローバルにインストールする必要があります。
+>$ npm install -g npm-check-updates
