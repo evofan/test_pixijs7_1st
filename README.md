@@ -1,6 +1,6 @@
 # First test of PixiJS ver7.
 
-<img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs7_1st_test3.jpg" width="50%">  
+<img src="https://evofan.github.io/test_pixijs7_1st/screenshot/pic_pixijs_add_ticker.jpg" width="50%">  
 
 **Demo**  
 [https://evofan.github.io/test_pixijs7_1st/dist/](https://evofan.github.io/test_pixijs7_1st/dist/)  
