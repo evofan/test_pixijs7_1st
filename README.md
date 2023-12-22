@@ -59,3 +59,8 @@ Errror with Permissions-Policy header: Origin trial controlled feature not enabl
 [https://tacamy.hatenablog.com/entry/2016/08/10/193603](https://tacamy.hatenablog.com/entry/2016/08/10/193603)    
 >初回のみ、npm-check-updatesをグローバルにインストールする必要があります。
 >$ npm install -g npm-check-updates
+
+**Multiple | PixiJS**  
+[https://pixijs.com/examples/assets/multiple](https://pixijs.com/examples/assets/multiple)  
+>PIXI.Assets.add(), PIXI.Assets.load()
+
