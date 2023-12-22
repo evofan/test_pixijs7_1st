@@ -67,6 +67,7 @@ text2.x = WIDTH / 2 + text1.width - 50;
 text2.y = HEIGHT / 2 - 10;
 
 let image1;
+let image2;
 let loadingEnd = false;
 
 // Load image and Set sprite
@@ -83,7 +84,20 @@ const LoadImg = async () => {
     // image1.height = image1.height / 2;
     image1.scale.set(0.5, 0.5);
     container.addChild(image1);
-    next();
+
+    const texture2 = await Assets.load('assets/images/pic_cake.png');
+    image2 = Sprite.from(texture2);
+    console.log(texture2);
+    console.log(image2);
+    image2.anchor.set(0.5);
+    image2.x = WIDTH / 2;
+    image2.y = HEIGHT / 2 + 90;
+    // image2.scale.set(0.5, 0.5);
+    container.addChild(image2);
+
+    // ここでアセット分繰り返して連番で取得する？
+
+    next(); // next actions
 }
 
 LoadImg();
